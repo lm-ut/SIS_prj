@@ -7,4 +7,4 @@ The script will estimate allele frequencies on population Y based on the alleles
 ### Usage: python script.py popX_file popY_file  
 
 Where popX_file is the prefix of .frq plink file obtained from the reference population  
-While popY_file is the prefix of .frq and .tped plink files obtained from the population on which we wanted to estimaed the allele frequencies, limited on the alleles shared with popX/reference population.
+While popY_file is the prefix of .frq and .tped plink files obtained from the population Y on which we wanted to estimate the allele frequencies, limited on the alleles shared with population X.
