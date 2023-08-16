@@ -1,6 +1,6 @@
 # SIS_prj
 
-### This script was used in the SIS_prj, now submitted  
+### This script was used in the SIS_prj 
 
 The script will estimate allele frequencies on population Y based on the alleles available in population X.
 
