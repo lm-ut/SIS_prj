@@ -46,7 +46,7 @@ def HET_2pq(insert_float):
     return h2pq
 
 # This is the core estimation: 
-# where we extract the number of sample available per each SNPs in the Reference group and then select that number of sample in the Target group to then compute the frequencies.
+# where we extract the number of alleles available per each SNPs in the Reference group and then select that number of alleles in the Target group to then compute the frequencies.
 
 list_h2pq = []
 
