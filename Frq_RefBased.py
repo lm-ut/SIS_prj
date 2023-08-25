@@ -14,7 +14,7 @@ Target_name = sys.argv[2]
 #Loading files: frq file for the reference group & tped and frq file for Target group
 
 FRQ_file = pd.read_csv(REF_name+".frq", delim_whitespace=True)
-tped_file = pd.read_csv(Target_name+".tped",delim_whitespace=True, header=None)
+tped_file = pd.read_csv(Target_name+".tped", delim_whitespace=True, header=None)
 FRQ_Target_file = pd.read_csv(Target_name+".frq", delim_whitespace=True)
 
 
@@ -37,7 +37,7 @@ def AVG(list_het):
     
     print(mysum/count)
     AVG_est = mysum/count
-    return(AVG_est)
+    return AVG_est
 
 
 # Calculate 2pq
@@ -46,13 +46,13 @@ def HET_2pq(insert_float):
     return h2pq
 
 # This is the core estimation: 
-# where we extract the number of alleles available per each SNPs in the Reference group and then select that number of alleles in the Target group to then compute the frequencies.
+# where we extract the number of alleles available per each SNP in the Reference group and then select that number of alleles in the Target group to then compute the frequencies.
 
 list_h2pq = []
 
-for locus in range(0,len(FRQ_file)):
-    NCHR_found = FRQ_file.at[locus,"NCHROBS"]
-    alleles_tped = tped_file.iloc[locus,4:len(tped_file.columns)]
+for locus in range(0, len(FRQ_file)):
+    NCHR_found = FRQ_file.at[locus, "NCHROBS"]
+    alleles_tped = tped_file.iloc[locus, 4:len(tped_file.columns)]
     
     # Selecting one NON-ZERO allele each pair 
     p_allele = alleles_tped.iloc[::2]
@@ -121,7 +121,3 @@ with open(Target_name + "_BasedOn" + REF_name + "_HET_AVG.txt", "w") as out_file
     out_file.write("Heterozigosity of Target in .frq " + f"{frq_AVG_est}\n")
     out_file.write("Heterozigosity of Target by my estimation " + f"{TAR_AVG_est}\n")
     out_file.write("Heterozigosity based on REF " + f"{AVG_est}\n")
-
-
-
-
