@@ -2,7 +2,7 @@
 
 ### This script was used in the SIS_prj 
 
-The script will estimate allele frequencies on population Y based on the alleles available in population X.
+The script will estimate allele frequencies on population Y based on the alleles available in population X for [this work](https://onlinelibrary.wiley.com/doi/10.1002/ajpa.24911).
 
 ### Usage: python script.py popX_file popY_file  
 
